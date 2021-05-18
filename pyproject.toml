@@ -1,0 +1,43 @@
+[project]
+name = "dbimport"
+version = "0.2.0"
+description = "A simple GUI database import tool."
+authors = ["Anton Kupenko <anton.kupenko@gmail.com>"]
+license = "LGPL-3.0-only"
+readme = "README.md"
+requires-python = ">=3.8"
+repository = "https://github.com/qpenko/database-importer"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Topic :: Database",
+    "Topic :: Database :: Front-Ends"
+]
+
+[tool.black]
+line-length = 79
+target-version = ['py36', 'py37', 'py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 79
+skip_gitignore = true
